@@ -2,7 +2,6 @@ import React from "react";
 import "./index.css";
 import NavbarBrand from "../../components/NavbarBrand/index";
 import loginRightSvg from "../../Images/login-right.svg";
-import test1 from "../../Images/test3.svg";
 import RegisterForm from "../../components/RegisterForm/index";
 
 const Index = () => {
