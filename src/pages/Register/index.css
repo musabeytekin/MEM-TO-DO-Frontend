@@ -1,0 +1,29 @@
+.register-page {
+  height: 100vh;
+  /* background: linear-gradient(
+    90deg,
+    rgb(189, 241, 195) 0%,
+    rgb(160, 229, 159) 100%); */
+  background: rgb(235, 229, 229);
+}
+.register-page-right {
+  height: 100vh;
+}
+
+
+.register-right-img {
+  height: 100vh;
+  object-fit: contain;
+}
+
+.register-form {
+  margin: 2.5rem 0 0 10rem;
+}
+
+.form-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.9rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
