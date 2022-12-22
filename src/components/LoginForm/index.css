@@ -1,30 +1,26 @@
-.register-form {
-  max-width: 45vw;
+.login-form {
   margin-left: 14rem;
+  width: 45vw;
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
+  row-gap: 1.5rem;
 }
-.register-form .row {
-  row-gap: 1rem;
-}
-.register-form .form-title {
-  font-size: 2.2rem;
+
+.login-form .form-title {
+  font-size: 1.3rem;
   font-weight: 700;
   font-family: "montserrat", sans-serif;
   color: #000;
 }
-.register-form .form-control {
+.login-form .form-control {
+  margin-top: .6rem;
   border: 1px solid #e0e0e0;
   font-size: 1.2rem;
   border-bottom: 1px solid #e0e0e0;
   border-radius: 0;
 }
-.register-form .form-group {
-  position: relative;
-}
 
-.register-form .form-control:focus {
+.login-form .form-control:focus {
   box-shadow: none;
   border: 1.5px solid var(--primary-color);
 }
@@ -45,7 +41,7 @@
   color: var(--primary-color);
 }
 
-.register-form .btn {
+.login-form .btn {
   background-color: var(--primary-color);
   border: none;
   border-radius: 3px;
@@ -55,61 +51,71 @@
   font-family: "lato", sans-serif;
 }
 
-.form-card-register {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 0.9rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.login-img {
+  max-height: 27vh;
+  object-fit: cover;
 }
 
-@media (max-width: 1160px) {
-  .register-page-left {
-    width: 75vw;
-  }
+.form-card-login {
+  background-color: rgba(255, 255, 255);
+  padding: 4rem;
+  border-radius: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 55vw;
+}
 
-  .register-form {
-    margin-left: 2rem;
-    max-width: 60vw;
+.form-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .4rem;
+  margin-top: 8px;
+}
+
+
+@media (max-width: 1160px) {
+  .login-form {
+    width: 70vw;
+    margin-left: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .register-page-right {
+  .form-card-login {
+    max-width: 80vw;
+  }
+  .form-check {
+    margin-top: 0.8rem;
+  }
+  .login-page-right {
     display: none;
   }
-  .register-form {
-    max-width: 65vw;
+  .login-form {
+    max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .register-form * {
+  .login-form * {
     text-align: center;
     font-size: 15px;
   }
 
-  .register-page-left {
+  .login-page-left {
     width: 100vw;
-  }
-
-  .form-check {
-    margin-top: 0.8rem;
-  }
-  .register-form .form-title {
-    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 571px) {
-  .register-form {
-    max-width: 80vw;
-  }
-  .register-form .form-end {
+  .login-form .form-end {
     flex-direction: column;
-    row-gap: 1rem;
+  }
+  .login-form .form-end .btn{
+    align-self: stretch;
   }
 
-  .register-form .btn {
-    align-self: stretch;
+
+  .login-form {
+    width: 90vw;
   }
 }

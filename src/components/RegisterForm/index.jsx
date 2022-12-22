@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -53,9 +54,12 @@ const Index = () => {
       }}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <Form className="register-form form-card-register animate__animated animate__fadeInLeft">
           <h1 className="form-title">Sign Up for Free</h1>
-          <div className="row mt-5">
+          <p className="text-muted">
+            Organize, streamline and make your tasks smarter!
+          </p>
+          <div className="row mt-2">
             <div className="form-group col-sm-12 col-md-6">
               <Field
                 type="text"
@@ -63,7 +67,11 @@ const Index = () => {
                 className="form-control"
                 placeholder={"Your Name"}
               />
-              {/* <ErrorMessage name="name" component="div" /> */}
+              <ErrorMessage
+                name="name"
+                component="span"
+                className="error-message"
+              />
             </div>
             <div className="form-group col-sm-12 col-md-6">
               <Field
@@ -72,7 +80,11 @@ const Index = () => {
                 className="form-control"
                 placeholder={"Your Surname"}
               />
-              {/* <ErrorMessage name="surname" component="div" /> */}
+              <ErrorMessage
+                name="surname"
+                component="span"
+                className="error-message"
+              />
             </div>
             <div className="form-group col-12">
               <Field
@@ -81,7 +93,11 @@ const Index = () => {
                 className="form-control"
                 placeholder={"Your Email"}
               />
-              {/* <ErrorMessage name="email" component="div" /> */}
+              <ErrorMessage
+                name="email"
+                component="span"
+                className="error-message"
+              />
             </div>
             <div className="form-group col-12">
               <Field
@@ -90,7 +106,11 @@ const Index = () => {
                 className="form-control"
                 placeholder={"Username"}
               />
-              {/* <ErrorMessage name="username" component="div" /> */}
+              <ErrorMessage
+                name="username"
+                component="span"
+                className="error-message"
+              />
             </div>
             <div className="form-group col-12">
               <Field
@@ -99,7 +119,11 @@ const Index = () => {
                 className="form-control"
                 placeholder={"Your Password"}
               />
-              {/* <ErrorMessage name="password" component="div" /> */}
+              <ErrorMessage
+                name="password"
+                component="span"
+                className="error-message"
+              />
             </div>
             <div className="form-group col-12">
               <Field
@@ -108,21 +132,34 @@ const Index = () => {
                 className="form-control"
                 placeholder={"Confirm Password"}
               />
-              {/* <ErrorMessage name="passwordConfirm" component="div" /> */}
+              <ErrorMessage
+                name="passwordConfirm"
+                component="span"
+                className="error-message"
+              />
             </div>
           </div>
           <div className="form-check ps-0">
             <label>
-            By signing up, I agree to the MEM To Do <a href="#" target={"_blank"}>Privacy Policy</a> and <a href="#" target={"_blank"}>Terms of Service</a>.
+              By signing up, I agree to the MEM To Do{" "}
+              <a href="#" target={"_blank"}>
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a href="#" target={"_blank"}>
+                Terms of Service
+              </a>
+              .
             </label>
           </div>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="btn"
-          >
-            Sign Up for Free
-          </button>
+          <div className="d-flex align-items-center justify-content-between mt-3 form-end">
+            <button type="submit" disabled={isSubmitting} className="btn">
+              Sign Up for Free
+            </button>
+            <p className="text-muted form-check">
+              Already have an account? <Link to="/login">Log In</Link>
+            </p>
+          </div>
         </Form>
       )}
     </Formik>

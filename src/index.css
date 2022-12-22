@@ -1,7 +1,13 @@
 body {
-  font-family: 'poppins', sans-serif; 
+  font-family: "poppins", sans-serif;
 }
 
 :root {
-    --primary-color: #80af45;
+  --primary-color: #80af45;
+}
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  font-family: "lato", sans-serif;
+  margin-top: 0.5rem;
 }
